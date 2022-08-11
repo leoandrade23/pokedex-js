@@ -16,7 +16,7 @@ const fetchPokemon = async (pokemon) => {
 const renderPokemon = async (pokemon) => {
   qS(".pokemon-number").textContent = "";
   qS(".pokemon-name").textContent = "Loading...";
-  qS(".pokemon-image").src = "_assets/_media/pokeball.gif";
+  qS(".pokemon-image").src = "assets/media/pokeball.gif";
   const data = await fetchPokemon(pokemon);
   if (data) {
     qS(".pokemon-image").src =
@@ -29,7 +29,7 @@ const renderPokemon = async (pokemon) => {
     pokemonId = data.id;
   } else {
     qS(".pokemon-name").textContent = "Not Found";
-    qS(".pokemon-image").src = "_assets/_media/whos-that-pokemon.png";
+    qS(".pokemon-image").src = "assets/media/whos-that-pokemon.png";
   }
 };
 
